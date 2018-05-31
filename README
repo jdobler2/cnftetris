@@ -1,4 +1,4 @@
-CNFTetris is a model counter, designed to find the number of solutions to a SAT problem. It functions by ruling out large sections of the search space at a time, additionally ruling out any satisfying assignment to the SAT problem it finds, until the entire space has been ruled out. For details, please see https://arxiv.org/abs/1701.07473 .
+CNFTetris is a model counter, designed to find the number of solutions to a SAT problem. It functions by ruling out large sections of the search space at a time, additionally ruling out any satisfying assignment to the SAT problem it finds, until the entire space has been ruled out. Once this happens, it outputs the total number of satisfying assignments. For details, please see https://arxiv.org/abs/1701.07473 .
 
 To compile: make
 To run: ./subgraphcount
