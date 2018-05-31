@@ -1,9 +1,11 @@
+CNFTetris is a model counter, designed to find the number of solutions to a SAT problem. It functions by ruling out large sections of the search space at a time, additionally ruling out any satisfying assignment to the SAT problem it finds, until the entire space has been ruled out. For details, please see https://arxiv.org/abs/1701.07473 .
+
 To compile: make
 To run: ./subgraphcount
 
 From the resulting prompt, enter "loadcnf FILENAME [MODE]" (no quotes) to load the dataset into memory, then enter "tc fr" to begin. MODE should be filled in with 12 for without locks and 13 for with locks, with the additional suffixes "+" for Breadth First Search and "_" for Singleton. Note that singleton and locks enabled at the same time presently leads to undefined behavior.
 
-The code can also be run from the command line as "./subgraphcount s -e [FILENAME] [MODE] [flags]", where "filename" can be either the name of a file or "stdin".
+The code can also be run from the command line as "./subgraphcount s -e [FILENAME] [MODE] [flags]", where "filename" can be either the name of a CNF file in standard DIMACS format or "stdin".
 
 Please be advised that the code must be run on a computer with a CPU that supports SIMD 4.x and AVX2. If this is not the case, the code will ungracefully crash.
 
